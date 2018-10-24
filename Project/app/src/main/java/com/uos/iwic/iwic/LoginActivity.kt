@@ -19,8 +19,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
+
+    fun loginRegisterClicked(view:View) {
+        val intent=Intent(this,RegisterActivity::class.java)
+        startActivity(intent)
+    }
+
     fun loginOnClick(view:View){
-        val email = emailText.text.toString()
+        val email = EmailText.text.toString()
         val password = passwordText.text.toString()
 
         val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
