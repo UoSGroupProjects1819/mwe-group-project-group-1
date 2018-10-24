@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "518631673223",
+    "firebase_url": "https://iwic-application.firebaseio.com",
+    "project_id": "iwic-application",
+    "storage_bucket": "iwic-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518631673223:android:d7a9bddc3a16f49c",
+        "android_client_info": {
+          "package_name": "com.uos.iwic.iwic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518631673223-shb79hsukilt29nkc2tmae3dgutqcl5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uos.iwic.iwic",
+            "certificate_hash": "ee5c7a2e163d56a9ff9127409390858be731f8a3"
+          }
+        },
+        {
+          "client_id": "518631673223-c9gchjdk7tqj90cmkl8ldei3fl5i5mao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbvWzOpdmr4FZcHTE5N8PMGBwbonUty0E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518631673223-c9gchjdk7tqj90cmkl8ldei3fl5i5mao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
