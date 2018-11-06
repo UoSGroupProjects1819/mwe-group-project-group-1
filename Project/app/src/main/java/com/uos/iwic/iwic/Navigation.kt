@@ -58,24 +58,24 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            /*R.id.nav_camera -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
+            R.id.EventsMenuButton -> {
 
             }
-            R.id.nav_slideshow -> {
+            R.id.NewsMenuButton -> {
 
             }
-            R.id.nav_manage -> {
+            R.id.UpdatesMenuButton -> {
 
             }
-            R.id.nav_share -> {
+            R.id.MapsMenuButton -> {
 
             }
-            R.id.nav_send -> {
+            R.id.AccountMenuButton -> {
 
-            }*/
+            }
+            R.id.BookNowMenuButton -> {
+
+            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
