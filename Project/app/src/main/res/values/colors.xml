@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#333333</color>
     <color name="colorAccent">#ebba31</color>
     <color name="colorIwicYellow">#FFBF0B</color>
+    <color name="IwicYellow">#FFBF0B</color>
+    <color name="IwicBlue">#009CDE</color>
+    <color name="IwicRed">#DA291C</color>
+    <color name="IwicWhite">#DDDDDD</color>
+    <color name="IwicGrey">#333F48</color>
+    <color name="IwicOrange">#FFBF0B</color>
 </resources>
