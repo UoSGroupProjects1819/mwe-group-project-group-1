@@ -52,7 +52,9 @@
     <ImageView
         android:layout_width="175dp"
         android:layout_height="172dp" app:srcCompat="@drawable/logo"
-        android:id="@+id/imageView2" android:layout_marginTop="8dp"
+        android:id="@+id/LogoImage"
+        android:onClick="LogoButtonClicked"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +65,7 @@
         android:layout_width="133dp"
         android:layout_height="112dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:background="@color/IwicYellow"
         android:onClick="EventsButtonClicked"
@@ -72,21 +74,21 @@
         app:layout_constraintEnd_toStartOf="@+id/NewsButton"
         app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/LogoImage"
         tools:textSize="24sp" />
 
     <Button
         android:id="@+id/NewsButton"
         android:layout_width="224dp"
         android:layout_height="112dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="@color/IwicBlue"
         android:onClick="NewsButtonClicked"
         android:text="NEWS"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/LogoImage"
         tools:textSize="24sp" />
 
     <Button
@@ -97,7 +99,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@color/IwicRed"
-        android:onClick="UpdateButtonClicked"
+        android:onClick="UpdatesButtonClicked"
         android:text="UPDATES"
         android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
 
                     if (it.isSuccessful)
                     {
-                        val intent=Intent(this,MainActivity::class.java)
+                        val intent=Intent(this,HomeActivity::class.java)
                         startActivity(intent)
                     } else {
                         Log.w("AUTH", "signInWithEmail:failure", it.exception)
