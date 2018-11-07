@@ -8,13 +8,13 @@
 
     <ImageView
         android:id="@+id/Iwic_LOGO"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="279dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="133dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -24,7 +24,7 @@
         android:layout_marginTop="332dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/twitter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,7 +39,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/background2"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
