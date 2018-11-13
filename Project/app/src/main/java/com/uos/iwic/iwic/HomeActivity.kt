@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun EventsButtonClicked(view: View) {
-        intent = Intent(this, ContactActivity::class.java)
+        intent = Intent(this, Events::class.java)
         startActivity(intent)
     }
 

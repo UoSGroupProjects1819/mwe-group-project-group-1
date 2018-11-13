@@ -29,6 +29,8 @@ class LoginActivity : AppCompatActivity() {
         val email = EmailText.text.toString()
         val password = passwordText.text.toString()
 
+
+
         val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
 

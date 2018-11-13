@@ -40,8 +40,6 @@
         android:id="@+id/nav_header_image"
         android:layout_width="wrap_content"
         android:layout_height="223dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/background2"
         app:layout_constraintBottom_toTopOf="@+id/ContactWebImage"
         app:layout_constraintEnd_toEndOf="parent"
