@@ -1,8 +1,8 @@
 package com.uos.iwic.iwic
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
@@ -24,6 +24,10 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.fragment_holder, Events())
+        ft.commit()
     }
 
     override fun onBackPressed() {
@@ -52,18 +56,19 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+        var fragment: Fragment? = null
         when (item.itemId) {
             R.id.EventsMenuButton -> {
 
             }
             R.id.NewsMenuButton -> {
-
+                fragment = Events ()
             }
             R.id.UpdatesMenuButton -> {
 
             }
             R.id.MapsMenuButton -> {
-
+                fragment = ContactActivity ()
             }
             R.id.AccountMenuButton -> {
 
@@ -71,6 +76,11 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             R.id.BookNowMenuButton -> {
 
             }
+        }
+        if ( fragment != null) {
+            val ft = supportFragmentManager.beginTransaction()
+            ft.replace(R.id.fragment_holder, fragment)
+            ft.commit()
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)

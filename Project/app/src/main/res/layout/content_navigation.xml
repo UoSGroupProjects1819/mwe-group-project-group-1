@@ -8,4 +8,8 @@
     tools:context=".Navigation"
     tools:showIn="@layout/app_bar_navigation">
 
+    <FrameLayout android:id="@+id/fragment_holder" android:layout_weight="1"
+        android:layout_width="0px"
+        android:layout_height="match_parent" />
+
 </android.support.constraint.ConstraintLayout>
