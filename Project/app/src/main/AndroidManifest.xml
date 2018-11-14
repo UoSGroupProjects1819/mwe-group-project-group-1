@@ -12,36 +12,21 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
 
-<<<<<<< HEAD
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ContactActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".Events"/>
 
-            <activity android:name=".Events">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-=======
         <activity android:name=".LoginActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
     </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".ContactActivity"/>
 
-        <activity android:name=".RegisterActivity" />
-        <activity
-            android:name=".Navigation"
-            android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar">
->>>>>>> d873a7ba326a17d2744f9d088a57744c40f4fe41
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
 
     </application>
 
