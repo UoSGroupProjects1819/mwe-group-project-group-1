@@ -26,7 +26,7 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         nav_view.setNavigationItemSelectedListener(this)
 
         val ft = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.fragment_holder, Events())
+        ft.replace(R.id.fragment_holder, IntroductionActivity())
         ft.commit()
     }
 
@@ -59,10 +59,10 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         var fragment: Fragment? = null
         when (item.itemId) {
             R.id.EventsMenuButton -> {
-
+                fragment = Events ()
             }
             R.id.NewsMenuButton -> {
-                fragment = Events ()
+
             }
             R.id.UpdatesMenuButton -> {
 
