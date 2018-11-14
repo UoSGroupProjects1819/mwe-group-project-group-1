@@ -11,22 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ContactActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".Events"/>
-
-
+        <activity android:name=".Events" />
         <activity android:name=".LoginActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
-            <category android:name="android.intent.category.LAUNCHER"/>
-        </intent-filter>
-    </activity>
 
+        </activity>
+        <activity android:name=".Navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 
