@@ -8,33 +8,33 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 
-//class Adapter(val Events: ArrayList<Event>, val context: Context) : RecyclerView.Adapter<Adapter.ViewHolder>(){
+class Adapter(val Events: ArrayList<Event>, val context: Context) : RecyclerView.Adapter<Adapter.ViewHolder>(){
 
 
 
-    /*override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.ViewHolder{
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.ViewHolder{
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.eventsholder, parent, false))
-    }*/
+    }
 
-/*
+
     override fun getItemCount() = Events.size
 
 
     override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int) {
-        holder.BindEvents(Events[position])
+        holder.bindEvents(Events[position])
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        private val EventName: TextView = itemView.findViewById(R.id.)
-        private val EventDate: TextView = itemView.findViewById(R.id.)
-        private val EventLocation: TextView = itemView.findViewById(R.id.)
+        private val eventName: TextView = itemView.findViewById(R.id.EventName)
+        private val eventLocation: TextView = itemView.findViewById(R.id.EventLocation)
+        private val eventTime: TextView = itemView.findViewById(R.id.EventTime)
 
         //Binds the data from each track to fields within the class
-        fun bindTrack(event : Event) {
+        fun bindEvents(event : Event) {
 
-            eventName.text =
-            eventLength.text =
-                    eventDate.text =
+            eventName.text = event.event_name_html.toString()
+            eventTime.text = event.event_start_utc.toString()
+            eventLocation.text = event.event_venue_id.toString()
         }
 
 
@@ -45,4 +45,3 @@ import android.widget.TextView
 
 
 }
-        */
