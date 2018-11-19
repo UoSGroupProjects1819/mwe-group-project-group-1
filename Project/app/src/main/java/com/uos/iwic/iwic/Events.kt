@@ -9,14 +9,16 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_events.*
 import java.util.ArrayList
 
-//class Events : Fragment() {
+class Events : Fragment() {
 
-// override fun onCreateView(
-// inflater: LayoutInflater, container: ViewGroup?,
-// savedInstanceState: Bundle?
-//
-// ): View? {
-//
+    override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.activity_events, container, false)
+    }
+}
 //
 // //List of events to be passed to the adapter
 // var events = ArrayList<Event>()

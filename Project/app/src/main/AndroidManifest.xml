@@ -12,9 +12,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ContactActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".Events" />
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".Navigation">
             <intent-filter>
@@ -23,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroductionActivity"></activity>
     </application>
 
 </manifest>
