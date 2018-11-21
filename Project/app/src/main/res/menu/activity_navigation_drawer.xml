@@ -9,17 +9,11 @@
             android:id="@+id/EventsMenuButton"
             android:title="Events" />
         <item
-            android:id="@+id/NewsMenuButton"
-            android:title="News" />
-        <item
             android:id="@+id/UpdatesMenuButton"
             android:title="Updates" />
         <item
             android:id="@+id/MapsMenuButton"
             android:title="Maps" />
-        <item
-            android:id="@+id/AccountMenuButton"
-            android:title="Account" />
         <item
             android:id="@+id/BookNowMenuButton"
             android:title="Book Now" />

@@ -97,17 +97,11 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             R.id.EventsMenuButton -> {
                 fragment = Events ()
             }
-            R.id.NewsMenuButton -> {
-
-            }
             R.id.UpdatesMenuButton -> {
 
             }
             R.id.MapsMenuButton -> {
                 fragment = ContactActivity ()
-            }
-            R.id.AccountMenuButton -> {
-
             }
             R.id.BookNowMenuButton -> {
 
