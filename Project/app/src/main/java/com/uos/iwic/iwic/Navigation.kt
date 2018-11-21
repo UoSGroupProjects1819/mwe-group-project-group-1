@@ -26,7 +26,7 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         nav_view.setNavigationItemSelectedListener(this)
 
         val ft = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.fragment_holder, IntroductionActivity())
+        ft.replace(R.id.fragment_holder, IntroductionFragment())
         ft.commit()
     }
 
