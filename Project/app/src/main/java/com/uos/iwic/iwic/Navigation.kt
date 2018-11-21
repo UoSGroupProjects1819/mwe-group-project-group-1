@@ -8,8 +8,11 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_navigation.*
 import kotlinx.android.synthetic.main.app_bar_navigation.*
+import kotlinx.android.synthetic.main.nav_header_navigation.*
+import com.google.firebase.auth.FirebaseAuth
 
 class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +27,30 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        var navigationView = findViewById<NavigationView>(R.id.nav_view)
+        var header = navigationView.getHeaderView(0)
+        var header_email = header.findViewById<TextView>(R.id.nav_header_email)
+
+        //navigation_header_image
+        val user = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            // Name, email address, and profile photo Url
+            val name = user.displayName
+            val email = user.email
+            val photoUrl = user.photoUrl
+
+            //nav_header_username.text = name
+            header_email.text = email
+
+            // Check if user's email is verified
+            val emailVerified = user.isEmailVerified
+
+            // The user's ID, unique to the Firebase project. Do NOT use this value to
+            // authenticate with your backend server, if you have one. Use
+            // FirebaseUser.getToken() instead.
+            val uid = user.uid
+        }
 
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.fragment_holder, IntroductionFragment())
@@ -74,6 +101,9 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
 
             }
             R.id.BookNowMenuButton -> {
+
+            }
+            R.id.SignOutMenuButton -> {
 
             }
         }
