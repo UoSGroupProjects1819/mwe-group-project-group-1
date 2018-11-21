@@ -1,14 +1,17 @@
 package com.uos.iwic.iwic
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_navigation.*
 import kotlinx.android.synthetic.main.app_bar_navigation.*
 import kotlinx.android.synthetic.main.nav_header_navigation.*
@@ -50,6 +53,12 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getToken() instead.
             val uid = user.uid
+        }
+
+        if ( user == null )
+        {
+            var loginitem = navigationView.menu.findItem(R.id.SignOutMenuButton)
+            loginitem.title = "Log in"
         }
 
         val ft = supportFragmentManager.beginTransaction()
@@ -104,7 +113,17 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
 
             }
             R.id.SignOutMenuButton -> {
-
+                if ( FirebaseAuth.getInstance().currentUser == null )
+                {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    item.title = "Sign out"
+                } else {
+                    FirebaseAuth.getInstance().signOut()
+                    item.title = "Log In"
+                    val intent = Intent(this, Navigation::class.java)
+                    startActivity(intent)
+                }
             }
         }
         if ( fragment != null) {
