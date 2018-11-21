@@ -13,8 +13,8 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".Navigation"></activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".Navigation">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
