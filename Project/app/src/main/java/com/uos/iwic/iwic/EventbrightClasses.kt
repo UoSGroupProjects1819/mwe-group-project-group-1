@@ -38,3 +38,4 @@ data class Event(
         val event_show_colors_in_seatmap_thumbnail: Boolean?,
         val event_source: String?
 ) : Parcelable
+//https://www.eventbrite.co.uk/developer/v3/response_formats/event/#ebapi-std:format-event
