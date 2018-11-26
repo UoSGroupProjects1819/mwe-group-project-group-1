@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 
-class Adapter(val Events: ArrayList<Event>, val context: Context) : RecyclerView.Adapter<Adapter.ViewHolder>(){
+class EventAdapter(val Events: ArrayList<Event>, val context: Context) : RecyclerView.Adapter<EventAdapter.ViewHolder>(){
 
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.ViewHolder{
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventAdapter.ViewHolder{
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.eventsholder, parent, false))
     }
 
@@ -20,7 +20,7 @@ class Adapter(val Events: ArrayList<Event>, val context: Context) : RecyclerView
     override fun getItemCount() = Events.size
 
 
-    override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: EventAdapter.ViewHolder, position: Int) {
         holder.bindEvents(Events[position])
     }
 
