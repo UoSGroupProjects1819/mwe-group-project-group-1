@@ -6,6 +6,9 @@
 
     <group android:checkableBehavior="single" >
         <item
+            android:id="@+id/AboutUsMenuButton"
+            android:title="About Us" />
+        <item
             android:id="@+id/EventsMenuButton"
             android:title="Events" />
         <item

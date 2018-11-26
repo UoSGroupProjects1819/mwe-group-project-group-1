@@ -94,6 +94,9 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         // Handle navigation view item clicks here.
         var fragment: Fragment? = null
         when (item.itemId) {
+            R.id.AboutUsMenuButton -> {
+                fragment = IntroductionFragment()
+            }
             R.id.EventsMenuButton -> {
                 fragment = Events ()
             }
