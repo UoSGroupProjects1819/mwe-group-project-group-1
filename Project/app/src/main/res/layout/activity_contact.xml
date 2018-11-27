@@ -9,42 +9,58 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="182dp"
-        android:layout_height="144dp"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:src="@drawable/yellowwedge"
+        app:layout_constraintBottom_toTopOf="@+id/map_image_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="329dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:text="Location"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/map_image_contact"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.888" />
 
     <ImageView
         android:id="@+id/ContactWebImage"
-        android:layout_width="wrap_content"
-        android:layout_height="168dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/twitter"
+        android:adjustViewBounds="true"
+        android:background="@drawable/carparking"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintStart_toStartOf="@+id/map_image_contact"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     <ImageView
         android:id="@+id/map_image_contact"
         android:layout_width="wrap_content"
-        android:layout_height="223dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="204dp"
+        android:adjustViewBounds="false"
         android:background="@drawable/background2"
-        app:layout_constraintBottom_toTopOf="@+id/ContactWebImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -58,7 +74,7 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,24 +85,24 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_width="371dp"
+        android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="48dp"
-        android:text="Follow Us"
+        android:text="Car Parking"
         android:textAlignment="center"
-        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="36sp"
+        android:textColor="@color/White"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/ContactWebImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/map_image_contact"
-        app:layout_constraintVertical_bias="0.915"
+        app:layout_constraintVertical_bias="0.892"
         tools:textColor="@android:color/black"
         tools:textSize="30sp" />
 

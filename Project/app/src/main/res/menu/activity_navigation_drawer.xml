@@ -6,20 +6,26 @@
 
     <group android:checkableBehavior="single" >
         <item
-            android:id="@+id/AboutUsMenuButton"
-            android:title="About Us" />
+            android:id="@+id/IntroductionMenuButton"
+            android:title="Introduction" />
         <item
             android:id="@+id/EventsMenuButton"
             android:title="Events" />
         <item
-            android:id="@+id/UpdatesMenuButton"
-            android:title="Updates" />
+            android:id="@+id/NewsMenuButton"
+            android:title="News Feed" />
         <item
-            android:id="@+id/MapsMenuButton"
-            android:title="Maps" />
+            android:id="@+id/FindUsMenuButton"
+            android:title="Find Us" />
         <item
             android:id="@+id/BookNowMenuButton"
             android:title="Book Now" />
+        <item
+            android:id="@+id/MembershipsMenuButton"
+            android:title="Memberships" />
+        <item
+            android:id="@+id/AboutUsMenuButton"
+            android:title="About Us" />
         <item
             android:id="@+id/SignOutMenuButton"
             android:title="Sign Out" />

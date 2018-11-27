@@ -2,6 +2,7 @@ package com.uos.iwic.iwic
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceActivity
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
@@ -59,7 +60,25 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         {
             var loginitem = navigationView.menu.findItem(R.id.SignOutMenuButton)
             loginitem.title = "Log in"
+
+
+            //var bookNow = navigationView.menu.findItem(R.id.BookNowMenuButton)
+           //bookNow.setVisible(false)
+
+            var header_email = header.findViewById<TextView>(R.id.nav_header_email)
+            header_email.setAlpha(0.0f)
+
+            var header_image= header.findViewById<TextView>(R.id.nav_header_username)
+            header_image.setAlpha(0.0f)
+
+           // var header_background = header.findViewById<NavigationView>(R.id.HeaderAndroid)
+           //header_background.setAlpha(0.0f)
+          // var header_desc = header.findViewById<TextView>(R.id.nav_header_image)
+           // header_desc.setAlpha(0.0f)
+
         }
+
+
 
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.fragment_holder, IntroductionFragment())
@@ -94,19 +113,25 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         // Handle navigation view item clicks here.
         var fragment: Fragment? = null
         when (item.itemId) {
-            R.id.AboutUsMenuButton -> {
+            R.id.IntroductionMenuButton -> {
                 fragment = IntroductionFragment()
             }
             R.id.EventsMenuButton -> {
                 fragment = Events ()
             }
-            R.id.UpdatesMenuButton -> {
+            R.id.NewsMenuButton -> {
 
             }
-            R.id.MapsMenuButton -> {
+            R.id.FindUsMenuButton -> {
                 fragment = ContactActivity ()
             }
+            R.id.MembershipsMenuButton -> {
+                fragment = MembershipActivity()
+            }
             R.id.BookNowMenuButton -> {
+
+            }
+            R.id.AboutUsMenuButton -> {
 
             }
             R.id.SignOutMenuButton -> {
