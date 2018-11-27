@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import khttp.async
 import kotlinx.android.synthetic.main.activity_events.*
 import java.util.ArrayList
 
@@ -31,10 +32,26 @@ class Events : Fragment() {
         events_recycler.layoutManager = LinearLayoutManager(activity)
         events_recycler.adapter = adapter
 
+        var Event1 = Event("Event 1" , "28,11,2018", "Ipswich" )
+        var Event2 = Event("Event 2" , "28,11,2018", "Ipswich" )
+        var Event3 = Event("Event 3" , "28,11,2018", "Ipswich" )
 
+        events.add(Event1)
+        events.add(Event2)
+        events.add(Event3)
+
+
+        adapter.notifyDataSetChanged()
 
         return rootView
+
+
+
+
+
     }
+
+
 
 
 }

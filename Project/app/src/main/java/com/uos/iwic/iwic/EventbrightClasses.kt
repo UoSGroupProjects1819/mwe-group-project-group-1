@@ -7,7 +7,14 @@ import java.util.*
 
 @Parcelize
 data class Event(
+        val event_name_html: String?,
+        val event_start_utc: String?,
+        val event_venue_id:String?
+) : Parcelable
 
+
+@Parcelize
+data class Spoon(
         val event_name_html: String?,
         val event_description_html: String?,
         val event_organizer_id: String?,
