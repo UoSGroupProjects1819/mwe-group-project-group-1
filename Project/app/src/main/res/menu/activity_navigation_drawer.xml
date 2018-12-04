@@ -19,7 +19,7 @@
             android:title="Find Us" />
         <item
             android:id="@+id/BookNowMenuButton"
-            android:title="Book Now" />
+            android:title="Bookings" />
         <item
             android:id="@+id/MembershipsMenuButton"
             android:title="Memberships" />
