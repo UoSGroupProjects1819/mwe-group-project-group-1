@@ -10,15 +10,15 @@
         <shape android:shape="rectangle"  >
             <corners android:radius="30dp" />
             <stroke android:width="1dip" android:color="#5e7974" />
-            <solid android:color="#ffffff"/>
+            <solid android:color="#FFBF0B"/>
         </shape>
     </item>
     <item >
         <shape android:shape="rectangle"  >
             <corners android:radius="30dp" />
 
-            <stroke android:width="1dip" android:color="#ffffff" />
-            <solid android:color="#ffffff"/>
+            <stroke android:width="1dip" android:color="#FFBF0B" />
+            <solid android:color="#FFBF0B"/>
         </shape>
     </item>
 </selector>

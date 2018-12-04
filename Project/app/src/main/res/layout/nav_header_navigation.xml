@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/HeaderAndroid"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
+    android:layout_height="wrap_content"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -15,28 +15,20 @@
 
     <ImageView
         android:id="@+id/nav_header_image"
-        android:layout_width="167dp"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="146dp"
         android:layout_gravity="center"
+        android:adjustViewBounds="true"
         android:background="@drawable/logo"
         android:contentDescription="@string/nav_header_desc"
         android:foregroundGravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:scaleType="center" />
-
-    <TextView
-        android:id="@+id/nav_header_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:visibility="invisible" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/nav_header_email"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
+        android:layout_width="227dp"
+        android:layout_height="28dp"
         android:text="@string/nav_header_subtitle"
         android:textColor="@android:color/black" />
 
