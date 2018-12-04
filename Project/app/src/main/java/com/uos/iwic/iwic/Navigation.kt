@@ -68,8 +68,8 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             var header_email = header.findViewById<TextView>(R.id.nav_header_email)
             header_email.setAlpha(0.0f)
 
-            var header_image= header.findViewById<TextView>(R.id.nav_header_username)
-            header_image.setAlpha(0.0f)
+            //var header_image= header.findViewById<TextView>(R.id.nav_header_username)
+           // header_image.setAlpha(0.0f)
 
            // var header_background = header.findViewById<NavigationView>(R.id.HeaderAndroid)
            //header_background.setAlpha(0.0f)
