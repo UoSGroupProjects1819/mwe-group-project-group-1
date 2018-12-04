@@ -22,21 +22,21 @@
     <TextView
         android:id="@+id/textView12"
         android:layout_width="350dp"
-        android:layout_height="49dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Location"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="46sp"
+        android:textColor="@android:color/black"
+        android:textSize="55sp"
         app:layout_constraintBottom_toTopOf="@+id/map_image_contact"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintVertical_bias="0.482" />
 
     <ImageView
         android:id="@+id/ContactWebImage"
@@ -55,11 +55,11 @@
         android:id="@+id/map_image_contact"
         android:layout_width="wrap_content"
         android:layout_height="182dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="192dp"
         android:adjustViewBounds="false"
         android:background="@drawable/background2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
