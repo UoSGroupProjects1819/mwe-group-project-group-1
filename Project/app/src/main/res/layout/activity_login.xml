@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginbackground"
+    android:background="@color/White"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".LoginActivity">
 
@@ -62,6 +62,7 @@
         android:background="@drawable/roundedbutton"
         android:onClick="loginOnClick"
         android:text="Login"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
