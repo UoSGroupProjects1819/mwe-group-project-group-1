@@ -25,14 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MembershipActivity" />
-        <activity
-            android:name=".SplashScreenActivity"
-            android:label="@string/title_activity_splash_screen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".WebViewActivity"
-            android:label="@string/title_activity_web_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".WebViewActivity" />
     </application>
 
 </manifest>
