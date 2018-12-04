@@ -4,40 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/intro"
+    android:background="@drawable/introwhite"
     tools:context=".IntroductionFragment">
 
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="344dp"
-        android:layout_height="273dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
-        android:gravity="left"
-        android:text="Ipswich Waterfront Innovation Centre (IWIC) provides an interface between the University of Suffolk and business.   IWIC offers excellent co-working space and facilities to help entrepreneurs and innovators develop and grow new business concepts.   Existing businesses can also access University knowledge and resources through the IWIC to drive their growth and competitiveness through innovation.
-
-"
-        android:textAlignment="viewStart"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="164dp"
-        android:layout_marginBottom="17dp"
-        android:src="@drawable/yellowwedge"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
