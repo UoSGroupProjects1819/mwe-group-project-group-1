@@ -119,7 +119,7 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
                 fragment = Events ()
             }
             R.id.NewsMenuButton -> {
-
+                fragment = GalleryActivity()
             }
             R.id.FindUsMenuButton -> {
                 fragment = ContactActivity ()

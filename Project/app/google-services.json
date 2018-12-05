@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "518631673223-hc2ftikrkh4isl3odc27qu441mm5svjg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uos.iwic.iwic",
+            "certificate_hash": "173b8e46197ec586deec06a8669933bc341026af"
+          }
+        },
+        {
           "client_id": "518631673223-c9gchjdk7tqj90cmkl8ldei3fl5i5mao.apps.googleusercontent.com",
           "client_type": 3
         }
