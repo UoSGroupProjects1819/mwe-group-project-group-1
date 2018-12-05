@@ -21,6 +21,9 @@
             android:id="@+id/BookNowMenuButton"
             android:title="Bookings" />
         <item
+            android:id="@+id/GalleryMenuButton"
+            android:title="Gallery" />
+        <item
             android:id="@+id/MembershipsMenuButton"
             android:title="Memberships" />
         <item

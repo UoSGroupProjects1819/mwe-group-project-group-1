@@ -1,24 +1,20 @@
 package com.uos.iwic.iwic
 
-import android.content.ContentValues.TAG
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.support.annotation.NonNull
 import android.util.Log
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
-import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.QueryDocumentSnapshot
-
-
+import com.squareup.picasso.Picasso
+import com.uos.iwic.iwic.R.id.imagegallery
 
 
 class GalleryActivity : Fragment() {
+
+
+    val imageUrls = arrayListOf<String>()
 
     override fun onCreateView(
              inflater: LayoutInflater, container: ViewGroup?,
@@ -30,15 +26,22 @@ class GalleryActivity : Fragment() {
         db.collection("Gallery")
                 .get()
                 .addOnSuccessListener { result ->
-                    for (urls in result) {
-                        Log.d(TAG, urls.id + " => " + urls.data)
+                    val urls = result.documents[0]
+                    val test = urls.data
+                    if ( test != null ) {
+                        val list:ArrayList<String> = test["urls"] as ArrayList<String>
+                        for ( url in list) {
+                            imageUrls.add(url)
+                        }
                     }
                 }
                 .addOnFailureListener { exception ->
-                    Log.d(TAG, "Error getting documents: ", exception)
+                    Log.d("Gallery", "Error getting documents: ", exception)
                 }
-
-
         return inflater.inflate (R.layout.activity_gallery, container, false)
         }
     }
+
+
+
+
