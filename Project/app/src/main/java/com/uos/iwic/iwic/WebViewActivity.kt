@@ -81,7 +81,11 @@ class WebViewActivity : Fragment(){
         return networkInfo != null && networkInfo.isConnectedOrConnecting
     }
 
+<<<<<<< HEAD
             /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+=======
+    /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
                 if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
                     webView.goBack()
                     return true

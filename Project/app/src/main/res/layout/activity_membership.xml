@@ -18,6 +18,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+<<<<<<< HEAD
+=======
+        android:id="@+id/textView8"
+        android:layout_width="350dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="164dp"
+        android:text="  Daily Hot Desk Rate                                         £15.00      Monthly                                                               £75.00  3 Month IWIC Membership                         £185.00 6 Month IWIC Membership                         £325.00  12 Month IWIC Membership                      £660.00 Permanent Desk                                               £180.00                                                     All Prices exclude VAT                "
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
         android:id="@+id/textView9"
         android:layout_width="384dp"
         android:layout_height="53dp"
@@ -32,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/textView"
         android:layout_width="289dp"
@@ -49,6 +71,10 @@
 
     <TextView
         android:id="@+id/textView7"
+=======
+    <Button
+        android:id="@+id/buttonpayment"
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -85,6 +111,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+<<<<<<< HEAD
         android:text="TextView"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
@@ -271,5 +298,15 @@
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="246dp"
         tools:layout_editor_absoluteY="303dp" />
+=======
+        android:background="@drawable/roundedbutton"
+        android:text="Become a member HERE"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.166" />
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
 
 </android.support.constraint.ConstraintLayout>
