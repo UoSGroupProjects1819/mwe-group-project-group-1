@@ -81,13 +81,13 @@ class WebViewActivity : Fragment(){
         return networkInfo != null && networkInfo.isConnectedOrConnecting
     }
 
-    /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
-            webView.goBack()
-            return true
-        }
-        return super.onKeyDown(keyCode, event)
-    }*/
+            /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+                if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
+                    webView.goBack()
+                    return true
+                }
+                return super.onKeyDown(keyCode, event)
+            }*/
 
     private fun showErrorDialog(title: String, message: String, context: Context) {
         val dialog = AlertDialog.Builder(context)

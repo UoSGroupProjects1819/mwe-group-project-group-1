@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_navigation.*
 import kotlinx.android.synthetic.main.app_bar_navigation.*
 import kotlinx.android.synthetic.main.nav_header_navigation.*
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.gallery_image.*
 
 class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -119,7 +120,6 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
                 fragment = Events ()
             }
             R.id.NewsMenuButton -> {
-
             }
             R.id.FindUsMenuButton -> {
                 fragment = ContactActivity ()
@@ -130,6 +130,9 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             R.id.BookNowMenuButton -> {
                 fragment = WebViewActivity()
 
+            }
+            R.id.GalleryMenuButton -> {
+                fragment = GalleryActivity()
             }
             R.id.AboutUsMenuButton -> {
 
