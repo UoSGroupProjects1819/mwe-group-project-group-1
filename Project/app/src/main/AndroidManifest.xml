@@ -32,14 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MembershipActivity" />
-<<<<<<< HEAD
-        <activity android:name=".GalleryActivity"/>
-=======
-        <activity android:name=".GalleryActivity" />
->>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
-        <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".WebViewActivity"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
