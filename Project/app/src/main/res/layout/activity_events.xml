@@ -7,6 +7,27 @@
     android:background="@drawable/intro"
     tools:context=".Events">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/eventsRecycler"
+        android:layout_width="388dp"
+        android:layout_height="422dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="745dp"
+        android:layout_height="167dp"
+        android:src="@drawable/yellowwedge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -17,34 +38,12 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sharpsans_regular"
         android:text="EVENTS"
-        android:textColor="@color/IwicWhite"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/eventsRecycler"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/eventsRecycler"
-        android:layout_width="0dp"
-        android:layout_height="331dp"
-        android:layout_marginTop="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="167dp"
-        android:src="@drawable/yellowwedge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

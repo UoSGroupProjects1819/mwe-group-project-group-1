@@ -10,17 +10,31 @@ import android.view.View
 import android.view.ViewGroup
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
+<<<<<<< HEAD
+import com.squareup.picasso.Picasso
+import com.uos.iwic.iwic.R.id.imagegallery
+
+
+class GalleryActivity : Fragment() {
+
+
+    val imageUrls = arrayListOf<String>()
+=======
 
 class GalleryActivity : Fragment() {
 
     val imageUrls = arrayListOf<String>()
     lateinit var adapter: GalleryAdapter
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
 
     override fun onCreateView(
              inflater: LayoutInflater, container: ViewGroup?,
              savedInstanceState: Bundle?
         ): View? {
         // Inflate the layout for this fragment
+<<<<<<< HEAD
+
+=======
         val view = inflater.inflate (R.layout.activity_gallery, container, false)
 
         adapter = GalleryAdapter(imageUrls, activity!!.applicationContext)
@@ -29,6 +43,7 @@ class GalleryActivity : Fragment() {
         recycler.adapter = adapter
         recycler.layoutManager = LinearLayoutManager(activity!!.applicationContext)
 
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
         val db = FirebaseFirestore.getInstance()
         db.collection("Gallery")
                 .get()
@@ -40,18 +55,28 @@ class GalleryActivity : Fragment() {
                         for ( url in list) {
                             imageUrls.add(url)
                         }
+<<<<<<< HEAD
+=======
                         adapter.notifyDataSetChanged()
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
                     }
                 }
                 .addOnFailureListener { exception ->
                     Log.d("Gallery", "Error getting documents: ", exception)
                 }
+<<<<<<< HEAD
+        return inflater.inflate (R.layout.activity_gallery, container, false)
+=======
         return view
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
         }
     }
 
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
