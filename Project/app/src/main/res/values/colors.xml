@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#72777b</color>
-    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#ebba31</color>
     <color name="colorIwicYellow">#FFBF0B</color>
     <color name="IwicYellow">#FFBF0B</color>
-    <color name="IwicBlue">#009CDE</color>
+    <color name="IwicBlue">#009cde</color>
     <color name="IwicRed">#DA291C</color>
     <color name="IwicWhite">#dddddd</color>
     <color name= "White" >#ffffff</color>
