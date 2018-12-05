@@ -81,17 +81,14 @@ class WebViewActivity : Fragment(){
         return networkInfo != null && networkInfo.isConnectedOrConnecting
     }
 
-<<<<<<< HEAD
-            /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-=======
-    /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
->>>>>>> ecf693dfc069ac6a98d9e10eae5bc4635a754256
-                if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
-                    webView.goBack()
-                    return true
-                }
-                return super.onKeyDown(keyCode, event)
-            }*/
+    fun canGoBack():Boolean {
+        return webView.canGoBack()
+    }
+
+    fun goBack() {
+        webView.goBack()
+    }
+
 
     private fun showErrorDialog(title: String, message: String, context: Context) {
         val dialog = AlertDialog.Builder(context)
@@ -137,7 +134,4 @@ class WebViewActivity : Fragment(){
         objectAnimator.duration = 1000
         loaderImage.startAnimation(objectAnimator)
     }
-
-
 }
-

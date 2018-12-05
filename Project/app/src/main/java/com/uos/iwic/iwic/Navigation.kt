@@ -9,6 +9,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
@@ -20,6 +21,22 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.gallery_image.*
 
 class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    var webFragment: Fragment? = null
+    var inBooking: Boolean = false
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if ( inBooking && webFragment != null ) {
+
+            val webView = webFragment as WebViewActivity
+
+            if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
+                webView.goBack()
+                return true
+            }
+        }
+        return super.onKeyDown(keyCode, event)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,7 +128,9 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
-        var fragment: Fragment? = null
+        inBooking = false
+        webFragment = null
+        var fragment:Fragment? = null
         when (item.itemId) {
             R.id.IntroductionMenuButton -> {
                 fragment = IntroductionFragment()
@@ -129,7 +148,8 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             }
             R.id.BookNowMenuButton -> {
                 fragment = WebViewActivity()
-
+                webFragment = fragment
+                inBooking = true
             }
             R.id.GalleryMenuButton -> {
                 fragment = GalleryActivity()
