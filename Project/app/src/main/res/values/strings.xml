@@ -12,4 +12,6 @@
     <string name="linkonClick">Click Here <a href="https://onlineshop.ucs.ac.uk/product-catalogue/university-services/ipswich-waterfront-innovation-centre">Click Here</a></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 </resources>
