@@ -34,7 +34,7 @@
         <activity android:name=".MembershipActivity" />
         <activity android:name=".GalleryActivity" />
         <activity android:name=".SplashScreenActivity" />
-        <activity android:name=".WebViewActivity" />
+        <activity android:name=".WebViewActivity"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
