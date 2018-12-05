@@ -6,10 +6,14 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.provider.Settings
+import android.support.v4.app.Fragment
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.util.AttributeSet
 import android.view.KeyEvent
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.Transformation
 
@@ -17,17 +21,22 @@ import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ImageView
+import kotlinx.android.synthetic.main.abc_select_dialog_material.*
 import kotlinx.android.synthetic.main.activity_web_view.*
 
-class WebViewActivity : AppCompatActivity(){
+class WebViewActivity : Fragment(){
 
     private val URL = "https://iwic.skedda.com"
     private var isAlreadyCreated = false
+    private lateinit var loaderImage:ImageView
+    private lateinit var webView:WebView
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.activity_web_view, container, false)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_web_view)
+        loaderImage = view.findViewById(R.id.loaderImage)
+        webView = view.findViewById(R.id.webView)
 
         startLoaderAnimate()
 
@@ -44,52 +53,55 @@ class WebViewActivity : AppCompatActivity(){
                 endLoaderAnimate()
                 showErrorDialog("Error",
                         "No internet connection. Please check your connection.",
-                        this@WebViewActivity)
+                        view!!.context)
             }
         }
 
         webView.loadUrl(URL)
+
+        return view
     }
 
     override fun onResume() {
         super.onResume()
 
         if (isAlreadyCreated && !isNetworkAvailable()) {
+            val context = activity!!.applicationContext
             isAlreadyCreated = false
             showErrorDialog("Error", "No internet connection. Please check your connection.",
-                    this@WebViewActivity)
+                    context)
         }
     }
 
     private fun isNetworkAvailable(): Boolean {
         val connectionManager =
-                this@WebViewActivity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                activity!!.applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = connectionManager.activeNetworkInfo
 
         return networkInfo != null && networkInfo.isConnectedOrConnecting
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+    /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
             webView.goBack()
             return true
         }
         return super.onKeyDown(keyCode, event)
-    }
+    }*/
 
     private fun showErrorDialog(title: String, message: String, context: Context) {
         val dialog = AlertDialog.Builder(context)
         dialog.setTitle(title)
         dialog.setMessage(message)
-        dialog.setNegativeButton("Cancel", { _, _ ->
-            this@WebViewActivity.finish()
-        })
-        dialog.setNeutralButton("Settings", {_, _ ->
+        dialog.setNegativeButton("Cancel") { _, _ ->
+            //this@WebViewActivity.finish()
+        }
+        dialog.setNeutralButton("Settings") { _, _ ->
             startActivity(Intent(Settings.ACTION_SETTINGS))
-        })
-        dialog.setPositiveButton("Retry", { _, _ ->
-            this@WebViewActivity.recreate()
-        })
+        }
+        dialog.setPositiveButton("Retry") { _, _ ->
+            //this@WebViewActivity.recreate()
+        }
         dialog.create().show()
     }
 

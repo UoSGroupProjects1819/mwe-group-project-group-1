@@ -128,7 +128,7 @@ class Navigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
                 fragment = MembershipActivity()
             }
             R.id.BookNowMenuButton -> {
-
+                fragment = WebViewActivity()
 
             }
             R.id.AboutUsMenuButton -> {
