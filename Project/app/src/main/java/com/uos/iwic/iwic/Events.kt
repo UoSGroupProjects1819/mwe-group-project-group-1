@@ -15,6 +15,7 @@ class Events : Fragment() {
 
     //List of events to be passed to the adapter
     var events = ArrayList<Event>()
+    var url = "https://www.eventbriteapi.com/v3/organizations/51397954666/events/"
 
     //Late init tells the system that this variable is to be assigned to during runtime
     lateinit var adapter:EventAdapter
@@ -31,6 +32,8 @@ class Events : Fragment() {
         val events_recycler = rootView.findViewById(R.id.eventsRecycler) as RecyclerView
         events_recycler.layoutManager = LinearLayoutManager(activity)
         events_recycler.adapter = adapter
+
+        async.get(url , onResponse = {})
 
         var Event1 = Event("Event 1" , "28,11,2018", "Ipswich" )
         var Event2 = Event("Event 2" , "28,11,2018", "Ipswich" )
