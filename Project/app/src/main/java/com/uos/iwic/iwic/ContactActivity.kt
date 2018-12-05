@@ -11,56 +11,51 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.google.firebase.firestore.GeoPoint
 import com.google.android.gms.maps.MapView
-
+import com.uos.iwic.iwic.R.id.container
 
 
 class ContactActivity : Fragment() {
 
-    private val mapView: MapView? = null
-    private val mapController: MapController? = null
-    private val geoPoint: GeoPoint = null
+    //private val mapView: MapView? = null
+   // private val mapController: MapController? = null
+   // private val geoPoint: GeoPoint = null
 
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle
-
-
+            savedInstanceState: Bundle?
     ): View? {
-        mapView = (MapView) findViewById (R.id.mapview)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.activity_contact, container, false)
+    }
+}
+       // mapView = (MapView) findViewById (R.id.mapview)
 
         //sets the zoom to see the location closer
-        mapView.getController().setZoom(12)
+       // mapView.getController().setZoom(12)
 
         //this will let you to zoom in or out using the controllers
-        mapView.setBuiltInZoomControls(true)
+      //  mapView.setBuiltInZoomControls(true)
 
-        List<overlay> mapOverlays = mapView . getOverlays ()
-        Drawable drawable = this.resources.getDrawable(R.drawable.marker)
+       // List<overlay> mapOverlays = mapView . getOverlays ()
+       // Drawable drawable = this.resources.getDrawable(R.drawable.marker)
 
-        MyItemizedOverlay itemizedoverlay = new MyItemizedOverlay(drawable, this)
+        //MyItemizedOverlay itemizedoverlay = new MyItemizedOverlay(drawable, this)
 
-        GeoPoint point = new GeoPoint(46066940, 23570000)
+      //  GeoPoint point = new GeoPoint(46066940, 23570000)
         //this will show you the map at the exact location you want (if you not set this you will see the map somewhere in America)
-        mapView.getController().setCenter(point)
+      //  mapView.getController().setCenter(point)
 
-        GeoPoint point2 = new GeoPoint(35410000, 139460000)
-        OverlayItem overlayitem2 = new OverlayItem(point2, "Title for dialog", "Japan")
+      //  GeoPoint point2 = new GeoPoint(35410000, 139460000)
+       // OverlayItem overlayitem2 = new OverlayItem(point2, "Title for dialog", "Japan")
 
-        itemizedoverlay.addOverlay(overlayitem)
-        itemizedoverlay.addOverlay(overlayitem2)
-        mapOverlays.add(itemizedoverlay)
-    }
-}
-    @Override
-    protected boolean isRouteDisplayed()
-        return false;
+      //  itemizedoverlay.addOverlay(overlayitem)
+       // itemizedoverlay.addOverlay(overlayitem2)
+      //  mapOverlays.add(itemizedoverlay)
 
-        return inflater.inflate(R.layout.activity_contact, container, false)
+  //  @Override
+    //protected boolean isRouteDisplayed()
+       // return false;
+//
+      //
 
-
-
-    }
-
-
-}
