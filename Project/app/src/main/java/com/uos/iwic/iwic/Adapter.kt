@@ -26,15 +26,15 @@ class EventAdapter(val Events: ArrayList<Event>, val context: Context) : Recycle
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private val eventName: TextView = itemView.findViewById(R.id.EventName)
-        private val eventLocation: TextView = itemView.findViewById(R.id.EventLocation)
+        private val eventDescription: TextView = itemView.findViewById(R.id.EventLocation)
         private val eventTime: TextView = itemView.findViewById(R.id.EventTime)
 
         //Binds the data from each track to fields within the class
         fun bindEvents(event : Event) {
 
-            eventName.text = event.event_name_html.toString()
-            eventTime.text = event.event_start_utc.toString()
-            eventLocation.text = event.event_venue_id.toString()
+            eventName.text = event.name.toString()
+            eventTime.text = event.start.toString()
+            eventDescription.text = event.description.toString()
         }
 
 

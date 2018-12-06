@@ -7,15 +7,19 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.beust.klaxon.Klaxon
 import khttp.async
 import kotlinx.android.synthetic.main.activity_events.*
+import kotlinx.android.synthetic.main.notification_template_lines_media.*
 import java.util.ArrayList
 
 class Events : Fragment() {
 
     //List of events to be passed to the adapter
     var events = ArrayList<Event>()
-    var url = "https://www.eventbriteapi.com/v3/organizations/51397954666/events/"
+
+    private val organiserId = "11880541692"
+    private val authKey = "3GOGLWYHLB4XKTBZ7ZNH"
 
     //Late init tells the system that this variable is to be assigned to during runtime
     lateinit var adapter:EventAdapter
@@ -33,17 +37,21 @@ class Events : Fragment() {
         events_recycler.layoutManager = LinearLayoutManager(activity)
         events_recycler.adapter = adapter
 
-        async.get(url , onResponse = {})
 
-        var Event1 = Event("Event 1" , "28,11,2018", "Ipswich" )
-        var Event2 = Event("Event 2" , "28,11,2018", "Ipswich" )
-        var Event3 = Event("Event 3" , "28,11,2018", "Ipswich" )
+        async.get("https://www.eventbriteapi.com/v3/events/search/?organizer.id=$organiserId", headers=mapOf("Authorization" to "Bearer $authKey"), onResponse = {
 
-        events.add(Event1)
-        events.add(Event2)
-        events.add(Event3)
+            val returned = Klaxon()
+                    .parse<EventData>(this.text)
 
+            var listOfEvents = returned!!.events
 
+            for (event in listOfEvents){
+                events.add(event)
+            }
+
+            adapter.notifyDataSetChanged()
+
+        })
         adapter.notifyDataSetChanged()
 
         return rootView

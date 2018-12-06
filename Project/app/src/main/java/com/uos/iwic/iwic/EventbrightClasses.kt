@@ -6,43 +6,67 @@ import java.sql.Time
 import java.util.*
 
 @Parcelize
-data class Event(
-        val event_name_html: String?,
-        val event_start_utc: String?,
-        val event_venue_id:String?
+data class EventData(
+        val events: List<Event>,
+        val pagination: Pagination
 ) : Parcelable
-
 
 @Parcelize
-data class Spoon(
-        val event_name_html: String?,
-        val event_description_html: String?,
-        val event_organizer_id: String?,
-        val event_start_utc: Date?,
-        val event_start_timezone: String?,
-        val event_end_utc: Time?,
-        val event_end_timezone: String?,
-        val event_hide_start_date: Boolean?,
-        val event_hide_end_date: Boolean?,
-        val event_currency: String?,
-        val event_venue_id:String?,
-        val event_online_event:Boolean?,
-        val event_listed:Boolean?,
-        val event_logo_id_:String?,
-        val event_logo_id: String?,
-        val event_category_id: String?,
-        val event_subcategory_id: String?,
-        val event_format_id: String?,
-        val event_shareable: Boolean?,
-        val event_invite_only: Boolean?,
-        val event_password: String?,
-        val event_capacity: Int?,
-        val event_show_remaining: Boolean?,
-        val event_is_reserved_seating: Boolean?,
-        val event_is_externally_ticketed:Boolean?,
-        val event_show_pick_a_seat:Boolean?,
-        val event_show_seatmap_thumbnail:Boolean?,
-        val event_show_colors_in_seatmap_thumbnail: Boolean?,
-        val event_source: String?
+data class Pagination(
+        val has_more_items: Boolean,
+        val object_count: Int,
+        val page_count: Int,
+        val page_number: Int,
+        val page_size: Int
 ) : Parcelable
-//https://www.eventbrite.co.uk/developer/v3/response_formats/event/#ebapi-std:format-event
+
+@Parcelize
+data class Event(
+        val description: Description,
+        val end: End,
+        val logo: Logo,
+        val name: Name,
+        val start: Start,
+        val url: String
+) : Parcelable
+
+@Parcelize
+data class Name(
+        val html: String,
+        val text: String
+) : Parcelable
+
+@Parcelize
+data class Description(
+        val html: String,
+        val text: String
+) : Parcelable
+
+@Parcelize
+data class End(
+        val local: String,
+        val timezone: String,
+        val utc: String
+) : Parcelable
+
+@Parcelize
+data class Start(
+        val local: String,
+        val timezone: String,
+        val utc: String
+) : Parcelable
+
+@Parcelize
+data class Logo(
+        val original: Original,
+        val url: String
+) : Parcelable
+
+@Parcelize
+data class Original(
+        val height: Int,
+        val url: String,
+        val width: Int
+) : Parcelable
+
+
