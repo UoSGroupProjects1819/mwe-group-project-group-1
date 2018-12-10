@@ -49,17 +49,15 @@ class Events : Fragment() {
                 events.add(event)
             }
 
-            adapter.notifyDataSetChanged()
+            if ( activity != null ) {
+                activity?.runOnUiThread {
+                    adapter.notifyDataSetChanged()
+                }
+            }
 
         })
-        adapter.notifyDataSetChanged()
 
         return rootView
-
-
-
-
-
     }
 
 
